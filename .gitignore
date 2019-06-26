@@ -1,10 +1,7 @@
 api/.tmp
-api/.DS_Store
-api/.DS_Store?
 api/node_modules/
 api/.dpl/
 
-alurapic/.DS_Store
 alurapic/node_modules/
 alurapic/dist/
 alurapic/npm-debug.log

@@ -2,6 +2,8 @@
   <div class="corpo">
     <h1 class="centralizado">{{ titulo }}</h1>
     
+    <input type="search" class="filtro" v-on:input="filtro = $event.target.value" placeholder="filtre por parte do título">
+    
     <ul class="lista-fotos">
       <li class="lista-fotos-item" v-for="foto of fotos">
         
@@ -28,7 +30,8 @@ export default {
 
     return {
       titulo: 'Alurapic',
-      fotos: []      
+      fotos: [],
+      filtro: ''  
     }
   },
 
@@ -65,5 +68,9 @@ export default {
     width: 100%;
   }
 
+  .filtro {
+    display: block;
+    width: 100%;
+  }
 
 </style>

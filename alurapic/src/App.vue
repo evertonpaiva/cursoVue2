@@ -17,20 +17,17 @@ export default {
 
     return {
       titulo: 'Alurapic',
-      fotos: [
-        {
-          url: 'http://academiawashington.com.br/wp-content/uploads/2017/09/coisas-incriveis-sobre-seu-cachorro.jpg',
-          titulo: 'cachorro'
-        },
-        {
-          url: 'http://academiawashington.com.br/wp-content/uploads/2017/09/coisas-incriveis-sobre-seu-cachorro.jpg',
-          titulo: 'cachorro2'
-        },
-      ]      
+      fotos: []      
     }
+  },
 
+  created() {
+    
+    let promise = this.$http.get('http://localhost:3000/v1/fotos');
+    promise
+    .then(res => res.json())
+    .then(fotos => this.fotos = fotos, err => console.log(err));
   }
-
 }
 </script>
 

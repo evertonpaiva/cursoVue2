@@ -1,5 +1,5 @@
-# Vue.js parte 1
+# Vue.js parte 2
 
-## Construindo uma Single Page Applications
+## Construindo Single Page Applications
 
-Repositório do curso de Vue.js parte 1, oferecido pela Alura.
+Repositório do curso de Vue.js parte 2, oferecido pela Alura.

@@ -5,7 +5,20 @@
 <script>
 export default{
 
-    props: ['tipo', 'rotulo', 'confirmacao', 'estilo'],
+    props: {
+       tipo: {
+           type: String, 
+           required: true
+       },
+
+       rotulo: {
+           type: String, 
+           required: true
+       },
+
+       confirmacao: Boolean,
+       estilo: String
+   },
 
     methods: {
 

@@ -66,8 +66,7 @@ export default {
 
     remove(foto) {
       
-      this.$http
-        .delete(`v1/fotos/${foto._id}`)
+      this.resource.delete({ id: foto._id})
         .then(
             () => {
               let indice = this.fotos.indexOf(foto);
@@ -83,10 +82,11 @@ export default {
 
   created() {
     
-    let promise = this.$http.get('v1/fotos');
-    promise
-    .then(res => res.json())
-    .then(fotos => this.fotos = fotos, err => console.log(err));
+    this.resource = this.$resource('v1/fotos{/id}');
+    this.resource
+      .query()
+      .then(res => res.json())
+      .then(fotos => this.fotos = fotos, err => console.log(err));
   }
 }
 </script>

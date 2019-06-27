@@ -25,8 +25,8 @@
 import Painel from '../shared/painel/Painel';
 import ImagemResponsiva from '../shared/imagem-responsiva/ImagemResponsiva';
 import Botao from '../shared/botao/Botao';
-
 import transform from '../../directives/Transform';
+import FotoService from '../../domain/foto/FotoService';
 
 export default {
 
@@ -66,7 +66,7 @@ export default {
 
     remove(foto) {
       
-      this.resource.delete({ id: foto._id})
+      this.service.apaga(foto._id)
         .then(
             () => {
               let indice = this.fotos.indexOf(foto);
@@ -81,11 +81,11 @@ export default {
   },
 
   created() {
+
+    this.service = new FotoService(this.$resource);
     
-    this.resource = this.$resource('v1/fotos{/id}');
-    this.resource
-      .query()
-      .then(res => res.json())
+    this.service
+      .lista()
       .then(fotos => this.fotos = fotos, err => console.log(err));
   }
 }

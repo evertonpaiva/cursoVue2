@@ -8,7 +8,6 @@ Vue.directive('meu-transform', {
 
         el.addEventListener('dblclick', function() {
             let incremento = binding.value || 90;
-            let animate = false;
             
             if(binding.modifiers.reverse) {
                 current-=incremento;                

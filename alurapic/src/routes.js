@@ -1,4 +1,5 @@
-import Cadastro from './components/cadastro/Cadastro';
+const Cadastro = () => System.import('./components/cadastro/Cadastro');
+
 import Home from './components/home/Home';
 
 export const routes = [

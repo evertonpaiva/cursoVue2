@@ -14,7 +14,8 @@ import './assets/css/teste.css';
 import './assets/js/teste.js'
 
 Vue.use(VueResource);
-Vue.http.options.root = 'http://localhost:3000';
+
+Vue.http.options.root = process.env.API_URL ? process.env.API_URL : 'http://localhost:3000';
 
 Vue.use(VueRouter);
 

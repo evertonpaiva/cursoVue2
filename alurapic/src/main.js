@@ -7,6 +7,8 @@ import './directives/Transform';
 import VeeValidate, { Validator } from 'vee-validate';
 import msgBR from 'vee-validate/dist/locale/pt_BR';
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 Vue.use(VueResource);
 Vue.http.options.root = 'http://localhost:3000';
 

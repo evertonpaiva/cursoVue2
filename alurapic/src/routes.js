@@ -1,4 +1,4 @@
-const Cadastro = () => System.import('./components/cadastro/Cadastro');
+const Cadastro = () => System.import('./components/cadastro/Cadastro.vue');
 
 import Home from './components/home/Home';
 
